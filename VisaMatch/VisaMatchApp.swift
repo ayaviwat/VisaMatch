@@ -11,7 +11,7 @@ import SwiftUI
 struct VisaMatchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
         }
     }
 }
