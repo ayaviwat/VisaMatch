@@ -15,18 +15,6 @@ struct RootTabView: View {
 
             NavigationStack {
                 ContentUnavailableView(
-                    "No saved internships yet",
-                    systemImage: "bookmark",
-                    description: Text("Listings you save will show up here.")
-                )
-                .navigationTitle("Bookmarks")
-            }
-            .tabItem {
-                Label("Bookmarks", systemImage: "bookmark")
-            }
-
-            NavigationStack {
-                ContentUnavailableView(
                     "Profile",
                     systemImage: "person.crop.circle",
                     description: Text("Visa status and course details go here.")
@@ -35,6 +23,19 @@ struct RootTabView: View {
             }
             .tabItem {
                 Label("Profile", systemImage: "person.crop.circle")
+            }
+            
+            
+            NavigationStack {
+                ContentUnavailableView(
+                    "No saved internships yet",
+                    systemImage: "bookmark",
+                    description: Text("Listings you save will show up here.")
+                )
+                .navigationTitle("Bookmarks")
+            }
+            .tabItem {
+                Label("Bookmarks", systemImage: "bookmark")
             }
         }
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 //types of visa a student would have
-enum VisaStatus: String, Codable {
+enum VisaStatus: String, Codable, CaseIterable {
     case studentVisa500
     case temporaryGraduate485
     case other
