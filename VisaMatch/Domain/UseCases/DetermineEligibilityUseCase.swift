@@ -18,11 +18,15 @@ enum EligibilityError: LocalizedError {
     }
 }
 
-//wont work yet for mvp
+// MVP limitation: eligibility is read from the listing's pre-set value rather than
+// matched against the student's visa conditions, since there's no real scraped
+// sponsorship data yet. Listings marked "unclear" surface as a typed error so the
+// UI can prompt the student to check manually rather than silently showing "unclear".
 struct DetermineEligibilityUseCase {
-    func execute(listing: InternshipListing, for student: StudentProfile) -> EligibilityStatus {
+    func execute(listing: InternshipListing, for student: StudentProfile) throws -> EligibilityStatus {
+        if listing.eligibility == .unclear {
+            throw EligibilityError.missingVisaInformation(roleTitle: listing.roleTitle)
+        }
         return listing.eligibility
     }
 }
- 
- 
