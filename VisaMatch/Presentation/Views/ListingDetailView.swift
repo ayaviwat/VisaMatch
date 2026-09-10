@@ -11,7 +11,13 @@ struct ListingDetailView: View {
     let listing: InternshipListing
     let student: StudentProfile
 
+    @Binding var savedListings: [InternshipListing]
     private let determineEligibility = DetermineEligibilityUseCase()
+    private let saveListing = SaveListingUseCase()
+
+    private var isSaved: Bool {
+        savedListings.contains { $0.id == listing.id }
+    }
 
     var body: some View {
         ScrollView {
@@ -61,6 +67,15 @@ struct ListingDetailView: View {
         }
         .navigationTitle("Internship Details")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    toggleSaved()
+                } label: {
+                    Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                }
+            }
+        }
     }
 
     @ViewBuilder
@@ -70,8 +85,8 @@ struct ListingDetailView: View {
             bannerLabel(
                 icon: status == .eligible ? "checkmark" : "xmark",
                 text: status == .eligible
-                    ? "Sponsors students on a study or graduate visa"
-                    : "Does not sponsor visa applicants for this role"
+                    ? "This employer sponsors visa applications for this role."
+                    : "This employer does not sponsor visa applicants for this role."
             )
         case .failure(let error):
             bannerLabel(
@@ -93,10 +108,18 @@ struct ListingDetailView: View {
         .overlay(alignment: .top) { Divider() }
         .overlay(alignment: .bottom) { Divider() }
     }
+
+    private func toggleSaved() {
+        if isSaved {
+            savedListings.removeAll { $0.id == listing.id }
+        } else {
+            try? saveListing.execute(listing: listing, into: &savedListings)
+        }
+    }
 }
 
 #Preview {
     NavigationStack {
-        ListingDetailView(listing: InternshipListing.mockSeekListings[0], student: .mockStudent)
+        ListingDetailView(listing: InternshipListing.mockSeekListings[0], student: .mockStudent, savedListings: .constant([]))
     }
 }
