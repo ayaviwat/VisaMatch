@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EligibilityError: LocalizedError {
+enum EligibilityError: LocalizedError, Equatable {
     case missingVisaInformation(roleTitle: String)
  
     var errorDescription: String? {

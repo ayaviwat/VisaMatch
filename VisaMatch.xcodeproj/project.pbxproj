@@ -6,11 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		0330E24B3053B2A900E669A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 033BA99E304AF79F00D84A2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 033BA9A5304AF79F00D84A2A;
+			remoteInfo = VisaMatch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0330E2473053B2A900E669A4 /* VisaMatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisaMatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		033BA9A6304AF79F00D84A2A /* VisaMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisaMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		0330E2483053B2A900E669A4 /* VisaMatchTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VisaMatchTests;
+			sourceTree = "<group>";
+		};
 		033BA9A8304AF79F00D84A2A /* VisaMatch */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = VisaMatch;
@@ -19,6 +35,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0330E2443053B2A900E669A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		033BA9A3304AF79F00D84A2A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				033BA9A8304AF79F00D84A2A /* VisaMatch */,
+				0330E2483053B2A900E669A4 /* VisaMatchTests */,
 				033BA9A7304AF79F00D84A2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				033BA9A6304AF79F00D84A2A /* VisaMatch.app */,
+				0330E2473053B2A900E669A4 /* VisaMatchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +73,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0330E2463053B2A900E669A4 /* VisaMatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0330E24D3053B2A900E669A4 /* Build configuration list for PBXNativeTarget "VisaMatchTests" */;
+			buildPhases = (
+				0330E2433053B2A900E669A4 /* Sources */,
+				0330E2443053B2A900E669A4 /* Frameworks */,
+				0330E2453053B2A900E669A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0330E24C3053B2A900E669A4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0330E2483053B2A900E669A4 /* VisaMatchTests */,
+			);
+			name = VisaMatchTests;
+			packageProductDependencies = (
+			);
+			productName = VisaMatchTests;
+			productReference = 0330E2473053B2A900E669A4 /* VisaMatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		033BA9A5304AF79F00D84A2A /* VisaMatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 033BA9B1304AF7A200D84A2A /* Build configuration list for PBXNativeTarget "VisaMatch" */;
@@ -80,6 +128,10 @@
 				LastSwiftUpdateCheck = 2660;
 				LastUpgradeCheck = 2660;
 				TargetAttributes = {
+					0330E2463053B2A900E669A4 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 033BA9A5304AF79F00D84A2A;
+					};
 					033BA9A5304AF79F00D84A2A = {
 						CreatedOnToolsVersion = 26.6;
 					};
@@ -100,11 +152,19 @@
 			projectRoot = "";
 			targets = (
 				033BA9A5304AF79F00D84A2A /* VisaMatch */,
+				0330E2463053B2A900E669A4 /* VisaMatchTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0330E2453053B2A900E669A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		033BA9A4304AF79F00D84A2A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +175,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0330E2433053B2A900E669A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		033BA9A2304AF79F00D84A2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +191,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0330E24C3053B2A900E669A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 033BA9A5304AF79F00D84A2A /* VisaMatch */;
+			targetProxy = 0330E24B3053B2A900E669A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0330E24E3053B2A900E669A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M8FFH6LZC3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pichaya.VisaMatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisaMatch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VisaMatch";
+			};
+			name = Debug;
+		};
+		0330E24F3053B2A900E669A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M8FFH6LZC3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pichaya.VisaMatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisaMatch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VisaMatch";
+			};
+			name = Release;
+		};
 		033BA9AF304AF7A200D84A2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,6 +426,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0330E24D3053B2A900E669A4 /* Build configuration list for PBXNativeTarget "VisaMatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0330E24E3053B2A900E669A4 /* Debug */,
+				0330E24F3053B2A900E669A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		033BA9A1304AF79F00D84A2A /* Build configuration list for PBXProject "VisaMatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,7 +8,7 @@
 import Foundation
 
 // when the search ends up with nothing it gives an error message
-enum AggregationError: LocalizedError {
+enum AggregationError: LocalizedError, Equatable {
     case noSourcesAvailable
 
     var errorDescription: String? {

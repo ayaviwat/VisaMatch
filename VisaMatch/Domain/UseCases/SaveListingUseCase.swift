@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SaveListingError: LocalizedError {
+enum SaveListingError: LocalizedError, Equatable {
     case alreadySaved(roleTitle: String)
  
     //if saving duplicates
