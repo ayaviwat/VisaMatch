@@ -18,7 +18,7 @@ struct FiltersView: View {
     var body: some View {
         NavigationStack {
             List {
-                Toggle("Show eligible internships only", isOn: $showEligibleOnly).tint(.gray)
+                Toggle("Show sponsored internships only", isOn: $showEligibleOnly).tint(.gray)
             }
             .listStyle(.plain)
             .navigationTitle("Filters")

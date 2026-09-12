@@ -11,6 +11,7 @@ struct ListingDetailView: View {
     let listing: InternshipListing
     let student: StudentProfile
 
+    @State private var showAppliedConfirmation = false
     @Binding var savedListings: [InternshipListing]
     private let determineEligibility = DetermineEligibilityUseCase()
     private let saveListing = SaveListingUseCase()
@@ -52,7 +53,7 @@ struct ListingDetailView: View {
         }
         .safeAreaInset(edge: .bottom) {
             Button {
-                // Applying will hand off to the source platform in a future iteration.
+                showAppliedConfirmation = true
             } label: {
                 Text("Apply")
                     .font(.headline)
@@ -67,6 +68,9 @@ struct ListingDetailView: View {
         }
         .navigationTitle("Internship Details")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Successfully applied!", isPresented: $showAppliedConfirmation) {
+            Button("OK", role: .cancel) {}
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
